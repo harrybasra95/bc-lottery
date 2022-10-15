@@ -1,0 +1,52 @@
+{
+    "name": "blockchain-lottery",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "test": "mocha '**/*.test.js' --ignore 'node_modules/**/*' ",
+        "build": "babel ./src --out-dir ./build",
+        "deploy": "babel-node src/deploy.js",
+        "compile": "babel-node src/compile.js",
+        "start": "nodemon --exec babel-node src/index.js",
+        "lint": "eslint .",
+        "postinstall": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/harrybasra95/bc-lottery.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/harrybasra95/bc-lottery/issues"
+    },
+    "homepage": "https://github.com/harrybasra95/bc-lottery#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.18.5",
+        "@babel/node": "^7.18.5",
+        "@babel/preset-env": "^7.18.2",
+        "@babel/runtime": "^7.18.3",
+        "eslint": "^8.17.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^8.0.1",
+        "nodemon": "^2.0.16",
+        "prettier": "^2.7.1"
+    },
+    "dependencies": {
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "@truffle/hdwallet-provider": "^2.1.0",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "ganache": "^7.4.4",
+        "mocha": "^10.0.0",
+        "solc": "^0.8.17",
+        "web3": "^1.8.0"
+    }
+}
